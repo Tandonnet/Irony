@@ -1,4 +1,3 @@
-
 function showResult() {
 	var x = document.querySelector('form');
 	var text = "";
@@ -35,7 +34,9 @@ async function makeIrony(text) {
 	document.getElementById("show-irony").innerHTML = newResult;
 	document.querySelector('#text-input').innerText = newResult;
 	navigator.clipboard.writeText(newResult);
-	document.querySelector('.bubble').style.display = 'flex';
+	showBox();
+	await delay(2);
+	showBox();
 }
 
 function delay(n){
@@ -53,3 +54,21 @@ document.addEventListener('keydown',(event)=>{
 	}
 })
 
+function showBox() {
+	let bubble = document.querySelector('.bubble');
+	if (bubble.classList.contains('hidden')) {
+		bubble.classList.remove('hidden');
+		setTimeout(function () {
+		  bubble.classList.remove('visuallyhidden');
+		}, 20);
+	} else {
+		bubble.classList.add('visuallyhidden');    
+		bubble.addEventListener('transitionend', function(e) {
+		  bubble.classList.add('hidden');
+		}, {
+		  capture: false,
+		  once: true,
+		  passive: false
+		});
+	}
+}
