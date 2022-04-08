@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="Irony generator" content="Generate text with ironic writing">
+	<title>Irony Generator</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js\javascript.js"></script>
+</head>
+	
+	<body>
+		<div class="parent">
+			<h1>Irony Generator</h1>
+			<h2>Enter text and get iRoNy aS A rEsuLt</h2>
+			<div class="input">
+				<form action="" id="form">
+					<h3>Enter text</h3>
+					<input type="text" id="text-input">
+				</form>
+				<button id="submit-btn" onclick="showResult()">Submit</button>
+			</div>
+			<div class="result">
+				<h3>You wrote "<span id="show-result"></span>"</h3>
+				<div class="bubble">
+					<h3>The text has been copied</h3>
+				</div>
+				<h3>The ironic text is "<span id="show-irony"></span>"</h3>
+			</div>
+		</div>
+	</body>
+</html>
