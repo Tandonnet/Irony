@@ -29,7 +29,7 @@ async function makeIrony(text) {
 		result.push(tempResult[index]);
 		newResult = result.join('');
 		document.getElementById("show-irony").innerHTML = newResult;
-		await delay(0.1);
+		await delay(0.06);
 	}
 	document.getElementById("show-irony").innerHTML = newResult;
 	document.querySelector('#text-input').innerText = newResult;
