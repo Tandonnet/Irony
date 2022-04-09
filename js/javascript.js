@@ -1,3 +1,6 @@
+let newResult = null;
+let inputed = null;
+
 function showResult() {
 	var x = document.querySelector('form');
 	var text = "";
@@ -6,6 +9,7 @@ function showResult() {
 	  text += x.elements[i].value;
 	}
 	document.getElementById("show-result").innerHTML = text;
+	inputed = text;
 	makeIrony(text);
   }
 
@@ -29,7 +33,7 @@ async function makeIrony(text) {
 		result.push(tempResult[index]);
 		newResult = result.join('');
 		document.getElementById("show-irony").innerHTML = newResult;
-		await delay(0.06);
+		await delay(0.04);
 	}
 	document.getElementById("show-irony").innerHTML = newResult;
 	document.querySelector('#text-input').innerText = newResult;

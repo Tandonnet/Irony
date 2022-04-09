@@ -69,6 +69,8 @@ form{
 .input input{
 	position: relative;
 	height:30%;
+	width: 30%;
+	text-align: center;
 }
 
 .result{
@@ -111,6 +113,50 @@ form{
 	opacity: 0;
 }
 
+.copyright{
+	position: relative;
+	color: white;
+	font-size: 15px;
+	text-align: right;
+	top: 95vh;
+}
+
+.languages{
+	position: fixed;
+	right: 2%;
+}
+
+.languages .chosen-btn{
+	background-color: rgb(71, 71, 71);
+	border-color: rgb(216, 216, 216);
+}
+
+.languages button{
+	background-color: rgb(32, 32, 32);
+	color: white;
+	border: 2px solid rgb(156, 156, 156);
+	border-radius: 15px;
+	cursor: pointer;
+	font-size: 30px;
+	width: 70px;
+	height: 150%;
+}
+
+.languages button:hover{
+	background-color: rgb(58, 58, 58);
+	border-color: rgb(180, 180, 180);
+	transition: all 0.5s;
+}
+
+.languages button:active{
+	border-color: rgb(6, 165, 6);
+	transition: all 0.1s;
+}
+.languages .chosen-btn:active{
+	border-color: red;
+	transition: all 0.1s;
+}
+
 @media (max-height : 840px) {
 	h1{
 		font-size: 60px;
@@ -146,5 +192,56 @@ form{
 @media (max-width:400px) {
 	.parent{
 		left: 30px;
+	}
+}
+
+@media (orientation:portrait) and (min-height:800px) {
+	.parent{
+		width: 110vw;
+		left: 0;
+		height: 100vh;
+	}
+	h1{
+		font-size: 620%;
+		padding-top: 20%;
+	}
+	h2{
+		font-size: 372%;
+	}
+	.input{
+		width: 100%;
+	}
+	.input button{
+		width: 85%;
+		font-size: 240%;
+	}
+	.input input{
+		width: 75%;
+		font-size: 300%;
+	}
+	.input h3{
+		font-size: 300%;
+	}
+	.result h3{
+		font-size: 372%;
+	}
+	.bubble{
+		width: 372%;
+	}
+	.copyright{
+		font-size: 150%;
+		top: 98vh;
+	}
+	.languages{
+		width: 100vw;
+		height: 2vh;
+		top: 3vh;
+		padding-top: 3px;
+	}
+	.languages button{
+		width: 45%;
+		margin: 0 1.25%;
+		font-size: 50px;
+		border-top: 3px solid;
 	}
 }
