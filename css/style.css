@@ -226,7 +226,7 @@ form{
 		font-size: 372%;
 	}
 	.bubble{
-		width: 372%;
+		width: 60%;
 	}
 	.copyright{
 		font-size: 150%;
@@ -234,7 +234,7 @@ form{
 	}
 	.languages{
 		width: 100vw;
-		height: 2vh;
+		height: 2.5vh;
 		top: 3vh;
 		padding-top: 3px;
 	}
